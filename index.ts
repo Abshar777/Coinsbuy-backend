@@ -23,7 +23,7 @@ const envSchema = z.object({
 const env = envSchema.parse(process.env);
 
 
-app.use(cors({ origin: env.FRONTEND_URL }));
+app.use(cors({ origin: [env.FRONTEND_URL,"http://69.62.85.63:3001", ,"*"]}));
 app.use(morgan("dev"));
 app.use(express.json());
 
