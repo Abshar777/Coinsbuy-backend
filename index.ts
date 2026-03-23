@@ -220,7 +220,6 @@ app.post("/api/coinsbuy/callback", (req: Request, res: Response) => {
   res.sendStatus(200);
 });
 
-app.listen(env.PORT, () => {
-  console.log(`Backend running on http://localhost:${env.PORT}`);
-  console.log(`Frontend expected at ${env.FRONTEND_URL}`);
+app.listen(env.PORT, "0.0.0.0", () => {
+  console.log(`Backend running on http://0.0.0.0:${env.PORT}`);
 });
